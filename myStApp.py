@@ -6,15 +6,20 @@ Created on Thu May 12 16:24:48 2022
 @author: stephenjoseph
 """
 import streamlit as st
-import pandas as pd
-import numpy as np
 
 st.write(""" #my first app
          """)
          
-         
-chart_data = pd.DataFrame(
-np.random.randn(20, 3),
-columns=['a', 'b', 'c'])
+        
+import schedule
+import time
 
-st.line_chart(chart_data)
+def job():
+    print("I'm working and the date/time is ",time.ctime())
+
+schedule.every(0.5).minutes.do(job)
+
+
+while 1:
+    schedule.run_pending()
+    time.sleep(1)
