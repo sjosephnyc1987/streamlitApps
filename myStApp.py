@@ -11,15 +11,10 @@ st.write(""" #my first app
          """)
          
         
-import schedule
 import time
 
-def job():
+
+while True:
     print("I'm working and the date/time is ",time.ctime())
-
-schedule.every(0.5).minutes.do(job)
-
-
-while 1:
-    schedule.run_pending()
-    time.sleep(1)
+    time.sleep(5)
+    
