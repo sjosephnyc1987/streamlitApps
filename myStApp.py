@@ -7,14 +7,13 @@ Created on Thu May 12 16:24:48 2022
 """
 import streamlit as st
 
-st.write(""" #my first app
-         """)
+st.write(""" #my first app """)
          
         
 import time
 
 
 while True:
-    print("I'm working and the date/time is ",time.ctime())
+    st.write("I'm working and the date/time is ",time.ctime())
     time.sleep(5)
     
